@@ -1,0 +1,153 @@
+
+/*-------------------  Center ------------------*/
+
+.center .stories {
+    display: flex;
+    justify-content: space-between;
+    height: 12rem;
+    gap: 0.5rem;
+    cursor: pointer;
+  }
+  
+  .stories .story {
+    padding: $card-padding;
+    border-radius: $card-border-radius;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    font-size: 0.75rem;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .stories .story::before {
+    content: "";
+    display: flex;
+    width: 100%;
+    height: 5rem;
+    position: absolute;
+    bottom: 0;
+    z-index: -1;
+  }
+  
+  .story .name {
+    z-index: 2;
+  }
+  
+  .story-user {
+    width: max-content;
+    text-align: center;
+  }
+  
+  .stories .story:nth-child(1) {
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.5)),
+      url(/images/profile-pic.png) no-repeat center center/cover;
+  }
+  .stories .story:nth-child(2) {
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.5)),
+      url(/images/BlueLock.gif) no-repeat center center/cover;
+  }
+  .stories .story:nth-child(3) {
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.5)),
+      url(/images/story-6.jpg) no-repeat center center/cover;
+  }
+  .stories .story:nth-child(4) {
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.5)),
+      url(/images/gojo.gif) no-repeat center center/cover;
+  }
+  .stories .story:nth-child(5) {
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.5)),
+      url(/images/story-2.jpg) no-repeat center center/cover;
+  }
+  .stories .story:nth-child(6) {
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.5)),
+      url(/images/SukunaFireArrow.gif) no-repeat center center/cover;
+  }
+  
+  .story .profile-photo {
+    width: 2.5rem;
+    height: 2.5rem;
+    align-items: start;
+    border: 3px solid $color-primary;
+  }
+  
+  /*------------------- Create post--------------*/
+  .center .create-post {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+    background: $color-white;
+    padding: 0.5rem $card-padding;
+    border-radius: $border-radius;
+  }
+  
+  .center .create-post input[type="text"] {
+    justify-self: start;
+    width: 100%;
+    padding-left: 1rem;
+    color: $color-dark;
+    margin-right: 1rem;
+  }
+  
+  /*--------------------- Feeds ---------------------*/
+  .center .feeds .feed {
+    background: $color-white;
+    border-radius: $card-border-radius;
+    padding: $card-padding;
+    margin: 1rem 0;
+    font-size: 0.8rem;
+    line-height: 1.5;
+    cursor: pointer;
+  }
+  
+  .feed .head {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .feed .user {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .feed .photo {
+    border-radius: $border-radius;
+    width: 44px;
+    overflow: hidden;
+    margin-bottom: 0.7rem;
+  }
+  
+  .feed .action-btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.4rem;
+    margin: 0.6rem;
+  }
+  
+  .center .liked-by {
+    display: flex;
+  }
+  
+  .center .liked-by span {
+    width: 1.4rem;
+    height: 1.4rem;
+    display: block;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid $color-white;
+    margin-left: -0.6rem;
+  }
+  
+  .liked-by span:first-child {
+    margin: 0;
+  }
+  
+  .liked-by p {
+    margin-left: 0.5rem;
+  }

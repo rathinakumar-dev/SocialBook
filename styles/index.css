@@ -1,0 +1,607 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+.profile-photo {
+  width: 2.5rem;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.6rem 2rem;
+  font-weight: 500;
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: all 300ms ease;
+  font-size: 0.9rem;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+.btn-primary {
+  background-color: hsl(252, 75%, 60%);
+  color: white;
+}
+
+.text-bold {
+  font-weight: 500;
+}
+
+.text-muted {
+  color: hsl(252, 15%, 65%);
+}
+
+/* --------------------------- NavBar ---------------------------*/
+nav {
+  width: 100%;
+  background: hsl(252, 30%, 100%);
+  padding: 0.5rem 0;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+}
+
+nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.search-bar {
+  display: flex;
+  background: hsl(252, 30%, 95%);
+  border-radius: 2rem;
+  padding: 0.5rem 1rem;
+}
+
+.search-bar input[type=search] {
+  background: transparent;
+  width: 30vw;
+  margin-left: 1rem;
+  font-size: 0.9rem;
+  color: hsl(252, 30%, 17%);
+}
+
+.search-bar input[type=search]::-moz-placeholder {
+  color: hsl(252, 15%, 65%);
+}
+
+.search-bar input[type=search]::placeholder {
+  color: hsl(252, 15%, 65%);
+}
+
+nav .create {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+/* --------------------------- left-sidebar ---------------------------*/
+.left-sidebar {
+  height: -moz-max-content;
+  height: max-content;
+  position: sticky;
+  top: 4.5rem;
+}
+
+.left-sidebar .profile {
+  background: hsl(252, 30%, 100%);
+  padding: 10px;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 0.8rem;
+       column-gap: 0.8rem;
+}
+
+.left-sidebar .account-handle {
+  font-size: 12px;
+}
+
+/*------------------- Sidebar --------------------*/
+main .sidebar {
+  background: hsl(252, 30%, 100%);
+  border-radius: 1rem;
+  margin-top: 0.8rem;
+}
+
+.sidebar .menu-item {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  height: 3.5rem;
+  position: relative;
+  transition: all 300ms ease;
+}
+
+.sidebar .menu-item:hover {
+  background: hsl(252, 30%, 95%);
+}
+
+.menu-item i {
+  margin-left: 1.5rem;
+  font-size: 1.3rem;
+  color: hsl(252, 15%, 65%);
+  padding-right: 1rem;
+  position: relative;
+}
+
+.menu-item h3 {
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.menu-item .notification-count,
+.messages-count {
+  background: hsl(0, 95%, 65%);
+  border-radius: 2rem;
+  color: white;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0.8rem;
+  width: 1.2rem;
+  text-align: center;
+  font-size: 0.7rem;
+}
+
+.sidebar .active i,
+.sidebar .active h3 {
+  color: hsl(252, 75%, 60%);
+}
+
+.sidebar .active::before {
+  content: "";
+  display: block;
+  width: 0.5rem;
+  height: 100%;
+  position: absolute;
+  background: hsl(252, 75%, 60%);
+}
+
+.sidebar .menu-item:first-child.active {
+  border-top-left-radius: 1rem;
+  overflow: hidden;
+}
+
+.sidebar .menu-item:last-child.active {
+  border-bottom-left-radius: 1rem;
+  overflow: hidden;
+}
+
+.side-btn {
+  display: block;
+  text-align: center;
+  margin: 0.8rem 0;
+}
+
+.notification-popup {
+  position: absolute;
+  top: 0;
+  left: 110%;
+  width: 32rem;
+  margin-bottom: 1rem;
+  font-size: 15px;
+  background: hsl(252, 30%, 100%);
+  padding: 1rem;
+  border-radius: 1rem;
+  z-index: 9;
+  display: none;
+}
+
+.notification-popup::before {
+  content: "";
+  width: 1.3rem;
+  height: 1.3rem;
+  display: block;
+  background: hsl(252, 30%, 100%);
+  position: absolute;
+  left: -0.5rem;
+  transform: rotate(45deg);
+}
+
+.notification-popup > div {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.notification-popup > div:last-child {
+  margin-bottom: 0;
+}
+
+.notification-popup small {
+  display: block;
+}
+
+/*-------------------  Center ------------------*/
+.center .stories {
+  display: flex;
+  justify-content: space-between;
+  height: 12rem;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+.stories .story {
+  padding: 1rem;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  font-size: 0.75rem;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.stories .story::before {
+  content: "";
+  display: flex;
+  width: 100%;
+  height: 5rem;
+  position: absolute;
+  bottom: 0;
+  z-index: -1;
+}
+
+.story .name {
+  z-index: 2;
+}
+
+.story-user {
+  width: -moz-max-content;
+  width: max-content;
+  text-align: center;
+}
+
+.stories .story:nth-child(1) {
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.5)), url(/images/profile-pic.png) no-repeat center center/cover;
+}
+
+.stories .story:nth-child(2) {
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.5)), url(/images/BlueLock.gif) no-repeat center center/cover;
+}
+
+.stories .story:nth-child(3) {
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.5)), url(/images/story-6.jpg) no-repeat center center/cover;
+}
+
+.stories .story:nth-child(4) {
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.5)), url(/images/gojo.gif) no-repeat center center/cover;
+}
+
+.stories .story:nth-child(5) {
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.5)), url(/images/story-2.jpg) no-repeat center center/cover;
+}
+
+.stories .story:nth-child(6) {
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.5)), url(/images/SukunaFireArrow.gif) no-repeat center center/cover;
+}
+
+.story .profile-photo {
+  width: 2.5rem;
+  height: 2.5rem;
+  align-items: start;
+  border: 3px solid hsl(252, 75%, 60%);
+}
+
+/*------------------- Create post--------------*/
+.center .create-post {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+  background: hsl(252, 30%, 100%);
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+}
+
+.center .create-post input[type=text] {
+  justify-self: start;
+  width: 100%;
+  padding-left: 1rem;
+  color: hsl(252, 30%, 17%);
+  margin-right: 1rem;
+}
+
+/*--------------------- Feeds ---------------------*/
+.center .feeds .feed {
+  background: hsl(252, 30%, 100%);
+  border-radius: 1rem;
+  padding: 1rem;
+  margin: 1rem 0;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  cursor: pointer;
+}
+
+.feed .head {
+  display: flex;
+  justify-content: space-between;
+}
+
+.feed .user {
+  display: flex;
+  gap: 1rem;
+}
+
+.feed .photo {
+  border-radius: 2rem;
+  width: 44px;
+  overflow: hidden;
+  margin-bottom: 0.7rem;
+}
+
+.feed .action-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.4rem;
+  margin: 0.6rem;
+}
+
+.center .liked-by {
+  display: flex;
+}
+
+.center .liked-by span {
+  width: 1.4rem;
+  height: 1.4rem;
+  display: block;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid hsl(252, 30%, 100%);
+  margin-left: -0.6rem;
+}
+
+.liked-by span:first-child {
+  margin: 0;
+}
+
+.liked-by p {
+  margin-left: 0.5rem;
+}
+
+/*--------------------- right ---------------------*/
+.right-sidebar {
+  height: -moz-max-content;
+  height: max-content;
+  position: sticky;
+  top: -28rem;
+  bottom: 0;
+}
+
+.right-sidebar .messages {
+  background: hsl(252, 30%, 100%);
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+.messages .heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.right-sidebar .messages i {
+  font-size: 1.4rem;
+}
+
+.messages .search-bar {
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.messages .search-bar input {
+  background: transparent;
+  margin-left: 0.5rem;
+}
+
+.messages .category {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+.category h6 {
+  width: 100%;
+  text-align: center;
+  border-bottom: 4px solid hsl(252, 30%, 95%);
+  padding-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.category .active {
+  border-color: hsl(252, 30%, 17%);
+}
+
+.message-request {
+  color: hsl(252, 75%, 60%);
+}
+
+.message .profile-photo {
+  position: relative;
+  overflow: visible;
+}
+
+.message .profile-photo img {
+  border-radius: 50%;
+}
+
+.message {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  align-items: center;
+  cursor: pointer;
+}
+
+.messages .message:last-child {
+  margin-bottom: 0;
+}
+
+.messages .message h5 {
+  align-items: flex-start;
+}
+
+.messages .message p {
+  font-size: 0.8rem;
+}
+
+.messages .message .profile-photo .active {
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: 50%;
+  border: 3px solid hsl(252, 30%, 100%);
+  position: absolute;
+  background: hsl(120, 95%, 65%);
+  bottom: 1.5rem;
+  right: -2px;
+}
+
+/*--------------- friend request ---------------*/
+.right-sidebar .friend-requests {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.right-sidebar .friend-requests h4 {
+  padding-left: 1rem;
+  color: hsl(252, 15%, 65%);
+  margin: 1rem 0;
+}
+
+.right-sidebar .request {
+  background: hsl(252, 30%, 100%);
+  padding: 1rem;
+  border-radius: 1rem;
+  margin-bottom: 0.7rem;
+}
+
+.request .info {
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.request .details {
+  margin-left: 1rem;
+}
+
+.details p {
+  font-size: 0.9rem;
+}
+
+.request .action {
+  text-align: center;
+}
+
+/* -------------- media queries --------------- */
+@media screen and (max-width: 1200px) {
+  .container {
+    width: 96%;
+  }
+  main .container {
+    grid-template-columns: 5rem auto 30vw;
+    gap: 1rem;
+  }
+  .left-sidebar {
+    width: 5rem;
+    z-index: 5;
+  }
+  main .container .left-sidebar .profile {
+    display: none;
+  }
+  .sidebar h3 {
+    display: none;
+  }
+  .left-sidebar .side-btn {
+    display: none;
+  }
+  .customize-theme .card {
+    width: 80vw;
+  }
+}
+/* table and mobile views */
+@media screen and (max-width: 992px) {
+  nav .search-bar {
+    display: none;
+  }
+  main .container {
+    grid-template-columns: 0 auto 5rem;
+    gap: 0;
+  }
+  main .container .left-sidebar {
+    grid-column: 3/4;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+  }
+  .left-sidebar .notification-popup {
+    position: absolute;
+    left: -20rem;
+    width: 20rem;
+  }
+  .left-sidebar .notification-popup::before {
+    position: absolute;
+    top: 1.3rem;
+    left: 19.4rem;
+    display: block;
+  }
+  main .container .center {
+    grid-column: 1/3;
+  }
+  main .container .right-sidebar {
+    display: none;
+  }
+}
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  border: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: hsl(252, 30%, 17%);
+  background-color: hsl(252, 30%, 95%);
+  overflow-x: hidden;
+}
+
+.container {
+  width: 85%;
+  margin: 0 auto;
+}
+
+/* --------------------------- Main ---------------------------*/
+main {
+  position: relative;
+  top: 4.5rem;
+}
+
+main .container {
+  display: grid;
+  grid-template-columns: 28vh auto 20vw;
+  -moz-column-gap: 1rem;
+       column-gap: 1rem;
+  position: relative;
+}/*# sourceMappingURL=index.css.map */

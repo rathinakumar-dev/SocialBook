@@ -1,0 +1,138 @@
+/* --------------------------- left-sidebar ---------------------------*/
+
+.left-sidebar {
+  height: max-content;
+  position: sticky;
+  top: $sticky-top-left;
+}
+
+.left-sidebar .profile {
+  background: $color-white;
+  padding: 10px;
+  border-radius: $card-border-radius;
+  display: flex;
+  align-items: center;
+  column-gap: 0.8rem;
+}
+
+.left-sidebar .account-handle {
+  font-size: 12px;
+}
+
+/*------------------- Sidebar --------------------*/
+
+main .sidebar {
+  background: $color-white;
+  border-radius: $card-border-radius;
+  margin-top: 0.8rem;
+}
+
+.sidebar .menu-item {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  height: 3.5rem;
+  position: relative;
+  transition: all 300ms ease;
+}
+
+.sidebar .menu-item:hover {
+  background: $color-light;
+}
+
+.menu-item i {
+  margin-left: 1.5rem;
+  font-size: 1.3rem;
+  color: $color-gray;
+  padding-right: 1rem;
+  position: relative;
+}
+
+.menu-item h3 {
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.menu-item .notification-count,
+.messages-count {
+  background: $color-danger;
+  border-radius: $border-radius;
+  color: white;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0.8rem;
+  width: 1.2rem;
+  text-align: center;
+  font-size: 0.7rem;
+}
+
+.sidebar .active i,
+.sidebar .active h3 {
+  color: $color-primary;
+}
+
+.sidebar .active::before {
+  content: "";
+  display: block;
+  width: 0.5rem;
+  height: 100%;
+  position: absolute;
+  background: $color-primary;
+}
+
+.sidebar .menu-item:first-child.active {
+  border-top-left-radius: $card-border-radius;
+  overflow: hidden;
+}
+
+.sidebar .menu-item:last-child.active {
+  border-bottom-left-radius: $card-border-radius;
+  overflow: hidden;
+}
+
+.side-btn {
+  display: block;
+  text-align: center;
+  margin: 0.8rem 0;
+}
+
+.notification-popup {
+  position: absolute;
+  top: 0;
+  left: 110%;
+  width: 32rem;
+  margin-bottom: 1rem;
+  font-size: 15px;
+  background: $color-white;
+  padding: $card-padding;
+  border-radius: $card-border-radius;
+  z-index: 9;
+  display: none;
+}
+
+.notification-popup::before {
+  content: "";
+  width: 1.3rem;
+  height: 1.3rem;
+  display: block;
+  background: $color-white;
+  position: absolute;
+  left: -0.5rem;
+  transform: rotate(45deg);
+}
+
+.notification-popup > div {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.notification-popup > div:last-child {
+  margin-bottom: 0;
+}
+
+.notification-popup small {
+  display: block;
+}

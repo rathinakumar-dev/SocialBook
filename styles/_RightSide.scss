@@ -1,0 +1,132 @@
+  /*--------------------- right ---------------------*/
+  
+  .right-sidebar {
+    height: max-content;
+    position: sticky;
+    top: $sticky-top-right;
+    bottom: 0;
+  }
+  
+  .right-sidebar .messages {
+    background: $color-white;
+    border-radius: $card-border-radius;
+    padding: $card-padding;
+  }
+  
+  .messages .heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+  }
+  
+  .right-sidebar .messages i {
+    font-size: 1.4rem;
+  }
+  
+  .messages .search-bar {
+    display: flex;
+    margin-bottom: 1rem;
+  }
+  
+  .messages .search-bar input {
+    background: transparent;
+    margin-left: 0.5rem;
+  }
+  
+  .messages .category {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    cursor:pointer;
+  }
+  
+  .category h6 {
+    width: 100%;
+    text-align: center;
+    border-bottom: 4px solid $color-light;
+    padding-bottom: 0.5rem;
+    font-size: 0.9rem;
+  }
+  
+  .category .active {
+    border-color: $color-dark;
+  }
+  
+  .message-request {
+    color: $color-primary;
+  }
+  
+  .message .profile-photo {
+    position: relative;
+    overflow: visible;
+  }
+  
+  .message .profile-photo img {
+    border-radius: 50%;
+  }
+  
+  .message {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    align-items: center;
+    cursor: pointer;
+  }
+  .messages .message:last-child {
+    margin-bottom: 0;
+  }
+  .messages .message h5 {
+    align-items: flex-start;
+  }
+  .messages .message p {
+    font-size: 0.8rem;
+  }
+  
+  .messages .message .profile-photo .active {
+    width: 0.8rem;
+    height: 0.8rem;
+    border-radius: 50%;
+    border: 3px solid $color-white;
+    position: absolute;
+    background: $color-success;
+    bottom: 1.5rem;
+    right: -2px;
+  }
+  
+  /*--------------- friend request ---------------*/
+  
+  .right-sidebar .friend-requests {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .right-sidebar .friend-requests h4 {
+    padding-left: 1rem;
+    color: $color-gray;
+    margin: 1rem 0;
+  }
+  
+  .right-sidebar .request {
+    background: $color-white;
+    padding: $card-padding;
+    border-radius: $card-border-radius;
+    margin-bottom: 0.7rem;
+  }
+  .request .info {
+    display: flex;
+    margin-bottom: 1rem;
+  }
+  
+  .request .details {
+    margin-left: 1rem;
+  }
+  
+  .details p {
+    font-size: 0.9rem;
+  }
+  
+  .request .action {
+    text-align: center;
+  }
+  

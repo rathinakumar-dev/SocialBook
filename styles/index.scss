@@ -1,0 +1,44 @@
+@import "variables";
+@import "Navbar";
+@import "LeftSide";
+@import "CenterSide";
+@import "RightSide";
+@import "MediaQueries";
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  border: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: $color-dark;
+  background-color: $color-light;
+  overflow-x: hidden;
+}
+
+.container {
+  width: 85%;
+  margin: 0 auto;
+}
+
+/* --------------------------- Main ---------------------------*/
+
+main {
+  position: relative;
+  top: 4.5rem;
+}
+
+main .container {
+  display: grid;
+  grid-template-columns: 28vh auto 20vw;
+  column-gap: 1rem;
+  position: relative;
+}
